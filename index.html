@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<meta name="description" content="Aaron Chou — Senior Software Engineer, AI agent systems and distributed backend. 17+ years.">
+<title>Aaron Chou — Senior Software Engineer</title>
+<style>
+  @page { size: A4; margin: 10mm 13mm; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+    font-size: 8.1pt; line-height: 1.2; color: #1a1a1a;
+    max-width: 800px; margin: 0 auto; padding: 14px 18px;
+  }
+  h1 { font-size: 18pt; margin: 0 0 1px; letter-spacing: -.3px; }
+  .tagline { font-size: 9.4pt; font-weight: 600; margin: 0 0 2px; }
+  .meta { font-size: 8.2pt; color: #555; margin: 0 0 8px; }
+  h2 {
+    font-size: 8pt; letter-spacing: 1.3px; text-transform: uppercase;
+    color: #333; border-bottom: 1px solid #bbb;
+    padding-bottom: 2px; margin: 6px 0 3px;
+  }
+  .role { display: flex; justify-content: space-between; align-items: baseline; margin-top: 5px; }
+  .role:first-of-type { margin-top: 0; }
+  .role b { font-size: 9.2pt; }
+  .role span { font-size: 8pt; color: #666; font-style: italic; white-space: nowrap; padding-left: 10px; }
+  ul { margin: 2px 0 0; padding-left: 14px; }
+  li { margin-bottom: 0.5px; }
+  .lead { font-weight: 600; }
+  .note { color: #666; font-style: italic; }
+  table { width: 100%; border-collapse: collapse; }
+  td { vertical-align: top; padding: 0; }
+  td.k { width: 100px; font-weight: 600; padding-right: 8px; }
+  @media print { body { padding: 0; } }
+
+  /* 螢幕版。⚠️ 上面那一整段是 A4 列印的真值（8.1pt 是給紙的），⛔ 不要改它——
+     這裡只在 screen 覆寫，Ctrl+P 出來的還是原來那張 A4。 */
+  @media screen {
+    body {
+      font-size: 15px; line-height: 1.58; max-width: 780px;
+      padding: 44px 24px 72px; color: #16181d; background: #fff;
+    }
+    h1 { font-size: 33px; margin-bottom: 3px; }
+    .tagline { font-size: 17px; margin-bottom: 5px; }
+    .meta { font-size: 14px; margin-bottom: 24px; }
+    h2 {
+      font-size: 12px; letter-spacing: 1.6px;
+      margin: 30px 0 10px; padding-bottom: 6px; border-bottom-color: #d8dade;
+    }
+    .role { margin-top: 20px; }
+    .role b { font-size: 16.5px; }
+    .role span { font-size: 13.5px; color: #6b7078; }
+    ul { margin-top: 7px; padding-left: 20px; }
+    li { margin-bottom: 7px; }
+    td { padding: 5px 0; }
+    td.k { width: 132px; padding-right: 14px; }
+  }
+
+  /* 手機。.role 是 flex row，窄螢幕會把職稱擠成兩三行而日期黏在右邊；
+     表格的固定寬 k 欄同理。兩個都改成上下堆。 */
+  @media screen and (max-width: 640px) {
+    body { padding: 26px 18px 56px; }
+    h1 { font-size: 27px; }
+    .tagline { font-size: 15.5px; }
+    .role { display: block; }
+    .role span { display: block; padding-left: 0; margin-top: 2px; white-space: normal; }
+    table, tbody, tr, td { display: block; width: 100%; }
+    td.k { width: auto; padding: 10px 0 0; }
+    td { padding: 2px 0; }
+  }
+</style>
+</head>
+<body>
+
+<h1>Aaron Chou</h1>
+<p class="tagline">Senior Software Engineer — AI Agent Systems &amp; Distributed Backend</p>
+<p class="meta">17+ yrs software engineering (5 yrs systems programming + 12 yrs full-stack) · Taipei, Taiwan · cake.me/aaron-chou</p>
+
+<h2>Core Expertise</h2>
+<ul>
+  <li><span class="lead">AI Systems:</span> multi-agent orchestration, Agentic RAG, Text2SQL, document pipelines (AWS Bedrock + SageMaker), autonomous ReAct loops with HITL and sandboxed execution, MCP and tool/API integration</li>
+  <li><span class="lead">Backend &amp; Data:</span> Python (FastAPI), TypeScript/Node.js (NestJS), Golang; PostgreSQL and vector DB — schema design, sharding, index optimization; async, event-driven ingestion at scale (Kubernetes + Pub/Sub, EventBridge, SQS) and OLAP preprocessing</li>
+  <li><span class="lead">Full-Stack:</span> React, React Native, Vue.js front ends built end to end with the APIs behind them — operations consoles, trading UI, wallet key-handling flows</li>
+  <li><span class="lead">Cloud &amp; Operations:</span> AWS, GCP, Kubernetes, Terraform; OpenTelemetry, Jaeger, Prometheus, Grafana, Loki, PagerDuty; CI/CD and infrastructure as code; multi-tenant isolation with per-tenant cost attribution</li>
+</ul>
+
+<h2>Professional Experience</h2>
+
+<div class="role"><b>FIO — Senior Software Engineer</b><span>Nov 2024 – Present · Remote</span></div>
+<ul>
+  <li><span class="lead">Multi-agent LLM platform:</span> architected an enterprise carbon-credit due-diligence platform on AWS Bedrock (Claude Sonnet) + SageMaker — 4 LLM extraction agents feeding an 8-agent parallel risk-assessment layer and a synthesis stage producing the final report.</li>
+  <li><span class="lead">Throughput:</span> cut end-to-end turnaround for one full carbon-project assessment report from 4–6 hours of expert manual review to under 10 minutes.</li>
+  <li><span class="lead">Agentic RAG &amp; Text2SQL:</span> multi-step reasoning over unstructured PDD and monitoring reports (Docling pipeline); a natural-language query layer that classifies intent first and declines rather than guessing when confidence is low, with deterministic guardrails on every generated statement (syntax parse, enforced LIMIT, table allow-list).</li>
+  <li><span class="lead">Reliability:</span> a structural validator per module, per-agent confidence emitted alongside results, and a tiered failure policy (fail fast / degrade / continue).</li>
+  <li><span class="lead">Infrastructure:</span> multi-tenant NestJS backend with workspace isolation and per-tenant cost attribution, on Terraform-managed AWS (ECS/Fargate, SageMaker, Bedrock, Lambda, EventBridge, S3).</li>
+</ul>
+
+<div class="role"><b>ewe technology — Technical Consultant (Contract)</b><span>May 2023 – Oct 2024</span></div>
+<ul>
+  <li>Architected a fault-tolerant DCA execution system (<b>Python</b> on GCP Cloud Functions, Cloud Scheduler-triggered), cutting average user transaction fees ~15% through gas and timing optimization; built real-time on-chain event listeners, subgraph optimization (The Graph) and Solidity integration, with an MEV flashbot POC (Uniswap v2 / PancakeSwap).</li>
+</ul>
+
+<div class="role"><b>Coolbitx — Senior Blockchain Developer</b><span>Mar 2020 – Mar 2023</span></div>
+<ul>
+  <li>Built near-real-time contract monitoring and an on-chain data ETL into <b>BigQuery</b> (OLAP preprocessing on Kubernetes + GCP Pub/Sub).</li>
+  <li>Deployed a high-availability multi-chain API platform (GCP Cloud Run and GKE, Terraform IaC) serving BTC, BCH, LTC, XRP, TRON, Cosmos and Polkadot on self-hosted containerized nodes (Golang/Gin), other chains via third-party node APIs; secure cold-wallet authentication APIs (AWS Lambda + CloudHSM).</li>
+  <li>Built the platform's <b>observability and on-call workflow</b>: <b>Prometheus</b> metrics and <b>Loki</b> logs surfaced in <b>Grafana</b>, with <b>PagerDuty</b> alerting that escalates when the first-line responder does not acknowledge.</li>
+  <li>Contributed to the <b>React Native</b> wallet app across seed-phrase, transaction-signing and keystore/keychain flows; built internal operations consoles (<b>React</b>) end to end with their APIs.</li>
+</ul>
+
+<div class="role"><b>ElandFintech — Full Stack Engineer / Cloud Architect</b><span>Feb 2019 – Mar 2020</span></div>
+<ul>
+  <li>Geth-based Layer-1 private chain and Stellar anchor service for an STO token-exchange product; high-throughput Stellar transaction channel (AWS Lambda + SQS).</li>
+</ul>
+
+<div class="role"><b>Bincentive — Full Stack Engineer</b><span>Sep 2018 – Feb 2019</span></div>
+<ul>
+  <li>Built a multi-exchange trading gateway (<b>Node.js</b>, ccxt, PostgreSQL, Redis) and the <b>Vue.js</b> front end that consumed it: market-data aggregation and order routing, real-time quotes pushed over WebSocket, pre-submit balance / parameter / duplicate-order checks and fill-status write-back after. <b>Go</b> carried the high-throughput read path.</li>
+</ul>
+
+<div class="role"><b>Wistron ITS — Full Stack Engineer</b><span>Mar 2017 – Sep 2018</span></div>
+<ul>
+  <li>Built a bank form-recognition pipeline (<b>Python/Flask</b> on Docker Swarm) — in-house segmentation and text-recognition models over credit-card and business application forms, routing low-confidence fields to human review.</li>
+  <li>Built an enterprise <b>conversational assistant</b> end to end (<b>Vue.js</b>, <b>ELK</b>, <b>RabbitMQ</b>): the chat UI, the dialog flow and its retrieval layer, indexed on Chinese word segmentation.</li>
+</ul>
+
+<div class="role"><b>EcrowdMedia (Readmoo) · Shuttle · Inventec — Earlier roles</b><span>2008 – 2016</span></div>
+<ul>
+  <li>Android tablet BSP and Node.js <b>OTA update infrastructure</b> for shipped devices; e-reader (Nook) embedded systems; multi-platform Linux drivers (ARM / TI / Freescale); EPUB reader (Readium fork) with AES/RSA DRM.</li>
+</ul>
+
+<h2>Self-Directed Work</h2>
+<ul>
+  <li><span class="lead">cogito-agent (Go, open source):</span> a Claude-driven, Slack-native coding agent running a sandboxed ReAct loop, built for failure containment — HITL approval for dangerous commands, Docker isolation, three hard guardrails (turn limit / dead-loop detection / per-task cost circuit breaker), MCP integration, OpenTelemetry tracing and per-session cost accounting.</li>
+  <li><span class="lead">immerse (Chrome MV3 extension, open source):</span> MAIN-world interception of signed subtitle requests, service-worker network handling with per-purpose token accounting, SM-2 review scheduler; deterministic hallucination control — model output is string-matched back to the source and dropped on mismatch. <span class="note">Personal tool, single user.</span></li>
+  <li><span class="lead">LLM orchestration (2023):</span> self-initiated LangChain POC for DeFi trading-signal analysis; moved to a hand-rolled orchestration layer for step-level debuggability and explicit state control. <span class="note">Not productionized.</span></li>
+</ul>
+
+<h2>Education &amp; Technical Skills</h2>
+<table>
+  <tr><td class="k">Education</td><td>M.S. Computer &amp; Communication Engineering, National Taipei University of Technology</td></tr>
+  <tr><td class="k">Languages</td><td>Python, TypeScript/Node.js (React, React Native, Vue.js), Golang, C/C++, Solidity, Rust</td></tr>
+  <tr><td class="k">Platforms</td><td>AWS (SageMaker, Bedrock, Lambda, ECS/Fargate, EventBridge, S3), GCP (Cloud Run, GKE, Pub/Sub, Cloud Scheduler), GitHub Actions</td></tr>
+  <tr><td class="k">Data</td><td>PostgreSQL (incl. pgvector), MySQL, MongoDB, Redis, RabbitMQ, Elasticsearch, BigQuery</td></tr>
+  <tr><td class="k">Web3</td><td>Ethereum, Bitcoin, Polkadot, Stellar, DeFi protocols, The Graph, zero-knowledge proofs</td></tr>
+</table>
+
+</body>
+</html>
