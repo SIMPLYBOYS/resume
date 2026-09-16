@@ -88,11 +88,11 @@
 
 <h2>Professional Experience</h2>
 
-<div class="role"><b>FIO — Senior Software Engineer</b><span>Nov 2024 – Present · Remote</span></div>
+<div class="role"><b>FIO — Senior Software Engineer</b><span>Nov 2024 – Feb 2026 · Remote</span></div>
 <ul>
   <li><span class="lead">Multi-agent LLM platform:</span> architected an enterprise carbon-credit due-diligence platform on AWS Bedrock (Claude Sonnet) + SageMaker — 4 LLM extraction agents feeding an 8-agent parallel risk-assessment layer and a synthesis stage producing the final report.</li>
   <li><span class="lead">Throughput:</span> cut end-to-end turnaround for one full carbon-project assessment report from 4–6 hours of expert manual review to under 10 minutes.</li>
-  <li><span class="lead">Agentic RAG &amp; Text2SQL:</span> multi-step reasoning over unstructured PDD and monitoring reports (Docling pipeline); a natural-language query layer that classifies intent first and declines rather than guessing when confidence is low, with deterministic guardrails on every generated statement (syntax parse, enforced LIMIT, table allow-list).</li>
+  <li><span class="lead">Agentic RAG &amp; Text2SQL:</span> multi-step reasoning over unstructured PDD and monitoring reports (Docling pipeline); a natural-language query layer that narrows 40+ tables to 3–6 without a model call and runs every generated statement through deterministic guardrails before execution (read-only, syntax parse, table allow-list, injection patterns, tenant isolation, enforced LIMIT).</li>
   <li><span class="lead">Reliability:</span> a structural validator per module, per-agent confidence emitted alongside results, and a tiered failure policy (fail fast / degrade / continue).</li>
   <li><span class="lead">Infrastructure:</span> multi-tenant NestJS backend with workspace isolation and per-tenant cost attribution, on Terraform-managed AWS (ECS/Fargate, SageMaker, Bedrock, Lambda, EventBridge, S3).</li>
 </ul>
@@ -112,7 +112,7 @@
 
 <div class="role"><b>ElandFintech — Full Stack Engineer / Cloud Architect</b><span>Feb 2019 – Mar 2020</span></div>
 <ul>
-  <li>Geth-based Layer-1 private chain and Stellar anchor service for an STO token-exchange product; high-throughput Stellar transaction channel (AWS Lambda + SQS).</li>
+  <li>Geth-based Layer-1 private chain and Stellar anchor service for an STO token-exchange product; payment gateway PoC; high-throughput Stellar transaction channel (AWS Lambda + SQS).</li>
 </ul>
 
 <div class="role"><b>Bincentive — Full Stack Engineer</b><span>Sep 2018 – Feb 2019</span></div>
