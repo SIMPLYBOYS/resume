@@ -82,7 +82,7 @@
 <ul>
   <li><span class="lead">AI Systems:</span> multi-agent orchestration, Agentic RAG, Text2SQL, document pipelines (AWS Bedrock + SageMaker), autonomous ReAct loops with HITL and sandboxed execution, MCP and tool/API integration</li>
   <li><span class="lead">Backend &amp; Data:</span> Python (FastAPI), TypeScript/Node.js (NestJS), Golang; REST, gRPC, WebSocket and SSE streaming APIs; PostgreSQL and vector DB — schema design, sharding, index optimization; async, event-driven ingestion at scale (Kubernetes + Pub/Sub, EventBridge, SQS) and OLAP preprocessing</li>
-  <li><span class="lead">Full-Stack:</span> React, React Native, Vue.js front ends built end to end with the APIs behind them — operations consoles, trading UI, wallet key-handling flows</li>
+  <li><span class="lead">Full-Stack:</span> React, React Native, Vue.js front ends with the APIs behind them — operations consoles, trading UI, wallet key-handling flows</li>
   <li><span class="lead">Cloud &amp; Operations:</span> AWS, GCP, Kubernetes, Terraform; OpenTelemetry, Jaeger, Prometheus, Grafana, Loki, PagerDuty; CI/CD and infrastructure as code; multi-tenant isolation with per-tenant cost attribution</li>
 </ul>
 
@@ -92,8 +92,8 @@
 <ul>
   <li><span class="lead">Multi-agent LLM platform:</span> architected an enterprise carbon-credit due-diligence platform on AWS Bedrock (Claude Sonnet) + SageMaker — 4 LLM extraction agents feeding an 8-agent parallel risk-assessment layer and a synthesis stage producing the final report.</li>
   <li><span class="lead">Throughput:</span> cut end-to-end turnaround for one full carbon-project assessment report from 4–6 hours of expert manual review to under 10 minutes.</li>
-  <li><span class="lead">Agentic RAG &amp; Text2SQL:</span> multi-step reasoning over unstructured PDD and monitoring reports (Docling pipeline); a natural-language query layer that narrows 40+ tables to 3–6 without a model call and runs every generated statement through deterministic guardrails before execution (read-only, syntax parse, table allow-list, injection patterns, tenant isolation, enforced LIMIT).</li>
-  <li><span class="lead">Reliability:</span> a structural validator per module, per-agent confidence emitted alongside results, and a tiered failure policy (fail fast / degrade / continue); agent runs traced in <b>Langfuse</b>.</li>
+  <li><span class="lead">Agentic RAG, Text2SQL &amp; MCP:</span> multi-step reasoning over unstructured PDD and monitoring reports (Docling pipeline); a natural-language query layer that narrows 40+ tables to 3–6 without a model call and runs every generated statement through deterministic guardrails before execution (read-only, syntax parse, table allow-list, injection patterns, tenant isolation, enforced LIMIT); two MCP servers in production (back-office database for this layer; Verra / Gold Standard registry lookups).</li>
+  <li><span class="lead">Reliability:</span> a structural validator per module, per-agent confidence emitted alongside results, and a tiered failure policy (fail fast / degrade / continue); agent runs and MCP tool calls traced in <b>Langfuse</b> with user and tenant.</li>
   <li><span class="lead">Infrastructure:</span> multi-tenant NestJS backend with workspace isolation and per-tenant cost attribution, on Terraform-managed AWS (ECS/Fargate, SageMaker, Bedrock, Lambda, EventBridge, S3).</li>
 </ul>
 
