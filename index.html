@@ -11,7 +11,7 @@
   * { box-sizing: border-box; }
   body {
     font-family: -apple-system, "Helvetica Neue", "Segoe UI", Arial, sans-serif;
-    font-size: 8.1pt; line-height: 1.2; color: #1a1a1a;
+    font-size: 7.8pt; line-height: 1.15; color: #1a1a1a;
     max-width: 800px; margin: 0 auto; padding: 14px 18px;
   }
   h1 { font-size: 18pt; margin: 0 0 1px; letter-spacing: -.3px; }
@@ -132,10 +132,13 @@
 </ul>
 
 <h2>Self-Directed Work</h2>
+<div class="role"><b>Open-source projects · github.com/SIMPLYBOYS</b><span>2026 – present</span></div>
 <ul>
-  <li><span class="lead">cogito-agent (Go, open source):</span> a Claude-driven, Slack-native coding agent running a sandboxed ReAct loop, built for failure containment — HITL approval for dangerous commands, Docker isolation, three hard guardrails (turn limit / dead-loop detection / per-task cost circuit breaker), MCP integration, OpenTelemetry tracing and per-session cost accounting.</li>
-  <li><span class="lead">immerse (Chrome MV3 extension, open source):</span> MAIN-world interception of signed subtitle requests, service-worker network handling with per-purpose token accounting, SM-2 review scheduler; deterministic hallucination control — model output is string-matched back to the source and dropped on mismatch. <span class="note">Personal tool, single user.</span></li>
-  <li><span class="lead">LLM orchestration (2023):</span> self-initiated LangChain POC for DeFi trading-signal analysis; moved to a hand-rolled orchestration layer for step-level debuggability and explicit state control. <span class="note">Not productionized.</span></li>
+  <li><span class="lead">cogito-agent (Go):</span> a Claude-driven, Slack-native coding agent running a sandboxed ReAct loop, built for failure containment — HITL approval for dangerous commands, Docker isolation, three hard guardrails (turn limit / dead-loop detection / per-task cost circuit breaker), MCP integration, OpenTelemetry tracing and per-session cost accounting.</li>
+  <li><span class="lead">pixel-office (FastAPI, Unity):</span> cogito's companion view: each agent is an employee in a pixel-art office with a persona, schedule, work thread and audit ledger, running cogito, Claude Code CLI or Codex CLI per task; approval cards for high-risk actions auto-reject on timeout.</li>
+  <li><span class="lead">agent-payment-authority (Go, Solidity):</span> authorization layer over x402: the agent requests a purchase but holds no key; deterministic Deny / Ask / Allow policy, WebAuthn approval by the person, and a signer in a separate OS account that checks the mandate and an on-chain Groth16 budget reservation before signing EIP-3009; an independent checker re-verifies each run against the chain. Ran end to end on Base Sepolia with a Claude Code agent. <span class="note">Testnet demo.</span></li>
+  <li><span class="lead">What carried across:</span> the agent proposes, code decides; a fooled agent still cannot act beyond its mandate.</li>
+  <li><span class="lead">LLM orchestration (2023):</span> LangChain POC for DeFi trading-signal analysis; moved to a hand-rolled layer for step-level debugging and explicit state. <span class="note">Not productionized.</span></li>
 </ul>
 
 <h2>Education &amp; Technical Skills</h2>
